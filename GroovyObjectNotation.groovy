@@ -56,4 +56,4 @@ class GroovyObjectNotation {
 
         return retVal
     }
-	}
+}
