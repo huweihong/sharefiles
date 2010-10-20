@@ -32,7 +32,7 @@ class GroovyObjectNotation {
     public String writeDate( obj ) {
         if (obj instanceof java.sql.Timestamp) return 'new java.sql.Timestamp(Date.parse(\'' + dateFormatText + '\',\''+dtFrmt.format(obj)+'\').getTime())'
         else if (obj instanceof java.sql.Time) return 'new java.sql.Time(Date.parse(\'' + dateFormatText + '\',\''+dtFrmt.format(obj)+'\').getTime())'
-        else if (obj instanceof java.sql.Date) return 'new java.sql.Date(Date.parse(\'' + dateFormatText + '\',\''+dtFrmt.format(obj)+'\')getTime())'
+        else if (obj instanceof java.sql.Date) return 'new java.sql.Date(Date.parse(\'' + dateFormatText + '\',\''+dtFrmt.format(obj)+'\').getTime())'
         else if (obj instanceof java.util.Date) return 'Date.parse(\'' + dateFormatText + '\',\''+dtFrmt.format(obj)+'\')'
         else if (obj instanceof java.util.Calendar) return 'new GregorianCalendar(Date.parse(\'' + dateFormatText + '\',\''+dtFrmt.format(obj)+'\').getTime())'
         else return obj.toString()
